@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>테마별 추천 여행지 - Travel Note</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="choo.css" />
+</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">travel note</a>
+    </div>
+    <nav class="menu">
+      <a href="wish.html">찜한 여행지</a>
+      <a href="mynote.html">나의 트레블 노트</a>
+      <a href="choo.html">테마별 추천 여행지</a>
+      <a href="check.html">여행 준비 체크리스트</a>
+    </nav>
+  </header>
+
+  <!-- 테마별 추천 여행지 섹션 -->
+  <section class="theme-section">
+    <h2>테마별 추천 여행지</h2>
+
+    <div class="filter-wrapper">
+      <!-- 라디오 버튼 숨기기 -->
+      <input type="radio" name="theme" id="all" checked>
+      <input type="radio" name="theme" id="relax">
+      <input type="radio" name="theme" id="sightseeing">
+      <input type="radio" name="theme" id="activity">
+      <input type="radio" name="theme" id="summer">
+      <input type="radio" name="theme" id="winter">
+
+      <!-- 필터 버튼 -->
+      <div class="theme-filters">
+        <label for="all">전체</label>
+        <label for="relax">휴식</label>
+        <label for="sightseeing">관광</label>
+        <label for="activity">액티비티</label>
+        <label for="summer">여름</label>
+        <label for="winter">겨울</label>
+      </div>
+
+      <!-- 여행지 카드 그룹 -->
+      <div class="theme-content">
+        <div class="theme-group relax">
+          <div class="card">
+            <img src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/0b373034-52bb-45d7-b983-1f9b15de0ac8.jpeg" alt="발리" />
+            <div class="card-text">
+              <h4>발리, 인도네시아</h4>
+              <p>해변가 풀빌라에서 여유로운 휴식</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://cdn.jejusori.net/news/photo/201805/204575_237095_0813.jpg" alt="제주도" />
+            <div class="card-text">
+              <h4>제주도, 대한민국</h4>
+              <p>조용한 바닷가 마을에서 힐링</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-group sightseeing">
+          <div class="card">
+            <img src="https://i.namu.wiki/i/04Ka6t5vfcSOYlnIQTAB6BEJUNFHxlMOHayVm7YRHjEL_MA5HISe7cb1jnstCTmDqtHLQOt-y7-5xMabPUZEkQ.webp" alt="파리" />
+            <div class="card-text">
+              <h4>파리, 프랑스</h4>
+              <p>에펠탑과 루브르, 예술과 낭만</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://www.gotokyo.org/kr/best-attractions/images/main.jpg" alt="도쿄" />
+            <div class="card-text">
+              <h4>도쿄, 일본</h4>
+              <p>과거와 미래가 공존하는 대도시</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-group activity">
+          <div class="card">
+            <img src="https://img.etoday.co.kr/pto_db/2018/06/600/20180622101248_1223622_1200_750.jpg" alt="퀸스타운" />
+            <div class="card-text">
+              <h4>퀸스타운, 뉴질랜드</h4>
+              <p>번지점프와 하이킹의 천국</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://blog-static.kkday.com/ko/blog/wp-content/uploads/us_hawaii_hanauma_bay.jpg" alt="하와이" />
+            <div class="card-text">
+              <h4>하와이, 미국</h4>
+              <p>서핑과 스노클링에 완벽한 섬</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-group summer">
+          <div class="card">
+            <img src="https://image.theminda.com/data/tg/image/item/high/201808/5255dc50caf6701048094636b98d7426.jpg" alt="푸껫" />
+            <div class="card-text">
+              <h4>푸켓, 태국</h4>
+              <p>뜨거운 태양과 에메랄드빛 바다</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-group winter">
+          <div class="card">
+            <img src="https://img.vogue.co.kr/vogue/2023/12/style_6572b2e937d3c.jpg" alt="삿포로" />
+            <div class="card-text">
+              <h4>삿포로, 일본</h4>
+              <p>눈축제와 온천이 매력적인 겨울 도시</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
+

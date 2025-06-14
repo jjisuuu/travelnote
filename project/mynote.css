@@ -1,0 +1,200 @@
+/* 전체 기본 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background: #f5f8fc;
+  color: #333;
+}
+
+/* 상단 네비게이션 바 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #00bcd4;
+}
+
+/* 나의 트레블 노트 - 카드 스타일 */
+.note-card-section {
+  padding: 60px 40px;
+  background-color: #f0fbfd;
+  text-align: center;
+}
+
+.note-card-section h2 {
+  font-size: 28px;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.note-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-card:hover {
+  transform: translateY(-6px);
+}
+
+.note-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.note-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.note-card-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.note-date {
+  font-size: 13px;
+  color: #999;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.note-card-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+/* 나의 트레블 노트 스타일 */
+.note-section {
+  padding: 60px 40px;
+  background-color: #f0fbfd;
+  text-align: center;
+}
+
+.note-section h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.note-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* 체크박스 숨기기 */
+.note-card-container input[type="checkbox"] {
+  display: none;
+}
+
+/* 카드 기본 스타일 */
+.note-card {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: block;
+  text-align: left;
+  position: relative;
+}
+
+.note-card:hover {
+  transform: translateY(-4px);
+}
+
+.note-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.note-card-text {
+  padding: 16px;
+}
+
+.note-card-text h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.note-card-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 상세 내용 숨김 */
+.note-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 16px;
+  color: #444;
+  font-size: 14px;
+}
+
+/* 체크되었을 때 상세 열기 */
+#note1:checked + label .note-detail,
+#note2:checked + label .note-detail {
+  max-height: 500px;
+  padding: 16px;
+}
+#note3:checked + label .note-detail,
+#note4:checked + label .note-detail {
+  max-height: 500px;
+  padding: 16px;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .note-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,89 @@
+/* 전체 기본 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background: #f5f8fc;
+  color: #333;
+}
+
+/* 상단 네비게이션 바 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #00bcd4;
+}
+
+
+/* 체크리스트 페이지 스타일 */
+.checklist-container {
+  background: #f0fbfd;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.checklist-container h2 {
+  font-family: 'Noto Sans KR', serif;
+  font-size: 30px;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+.checklist-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.checklist li {
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checklist input[type='checkbox'] {
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu a.active {
+  color: #00bcd4;
+  font-weight: 700;
+  border-bottom: 2px solid #00bcd4;
+}

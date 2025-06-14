@@ -1,0 +1,167 @@
+/* 전체 기본 스타일 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+  background: #f5f8fc;
+  color: #333;
+}
+
+/* 상단 네비게이션 바 */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.menu a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #00bcd4;
+}
+/* 기존 기본 스타일 유지 */
+
+/* 테마별 추천 여행지 스타일 */
+.theme-section {
+  padding: 60px 40px;
+  background-color: #f0fbfd; /* 살짝 푸른빛 배경 */
+  text-align: center;
+}
+
+.theme-section h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+/* 라디오 버튼 숨기기 */
+.filter-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* 필터 버튼 스타일 */
+.theme-filters {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.theme-filters label {
+  padding: 8px 18px;
+  border: 1px solid #00bcd4;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #00bcd4;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.filter-wrapper input#all:checked ~ .theme-filters label[for="all"],
+.filter-wrapper input#relax:checked ~ .theme-filters label[for="relax"],
+.filter-wrapper input#sightseeing:checked ~ .theme-filters label[for="sightseeing"],
+.filter-wrapper input#activity:checked ~ .theme-filters label[for="activity"],
+.filter-wrapper input#summer:checked ~ .theme-filters label[for="summer"],
+.filter-wrapper input#winter:checked ~ .theme-filters label[for="winter"] {
+  background-color: #00bcd4;
+  color: white;
+}
+
+/* 기본으로 모든 theme-group 숨김 */
+.theme-group {
+  display: none;
+}
+
+/* 전체 선택 시 모두 표시 */
+.filter-wrapper input#all:checked ~ .theme-content .theme-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* 각 테마별 선택 시 해당 그룹만 표시 */
+.filter-wrapper input#relax:checked ~ .theme-content .relax,
+.filter-wrapper input#sightseeing:checked ~ .theme-content .sightseeing,
+.filter-wrapper input#activity:checked ~ .theme-content .activity,
+.filter-wrapper input#summer:checked ~ .theme-content .summer,
+.filter-wrapper input#winter:checked ~ .theme-content .winter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* 카드 스타일 */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 16px;
+}
+
+.card-text h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .theme-filters {
+    justify-content: center;
+  }
+  .filter-wrapper input#all:checked ~ .theme-content .theme-group,
+  .filter-wrapper input#relax:checked ~ .theme-content .relax,
+  .filter-wrapper input#sightseeing:checked ~ .theme-content .sightseeing,
+  .filter-wrapper input#activity:checked ~ .theme-content .activity,
+  .filter-wrapper input#summer:checked ~ .theme-content .summer,
+  .filter-wrapper input#winter:checked ~ .theme-content .winter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
